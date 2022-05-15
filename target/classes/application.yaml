@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: sy-wechat-api

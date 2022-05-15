@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "cn.isyanthony.wechat.config.AppConfiguration",
+      "sourceType": "cn.isyanthony.wechat.config.AppConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.appid",
+      "type": "java.lang.String",
+      "description": "小程序的 app_id",
+      "sourceType": "cn.isyanthony.wechat.config.AppConfiguration"
+    },
+    {
+      "name": "app.appsecret",
+      "type": "java.lang.String",
+      "description": "小程序的 app_secret",
+      "sourceType": "cn.isyanthony.wechat.config.AppConfiguration"
+    }
+  ],
+  "hints": []
+}

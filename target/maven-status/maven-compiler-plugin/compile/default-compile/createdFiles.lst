@@ -1,0 +1,11 @@
+cn\isyanthony\wechat\resonse\AccessTokenResponse.class
+cn\isyanthony\wechat\resonse\Code2SessionResponse.class
+cn\isyanthony\wechat\rest\exception\RequestException.class
+cn\isyanthony\wechat\builder\WeChatApiUrlBuilder.class
+cn\isyanthony\wechat\config\AppConfiguration.class
+cn\isyanthony\wechat\rest\config\HttpConfig.class
+cn\isyanthony\wechat\resonse\Response.class
+cn\isyanthony\wechat\api\ApiWeChat.class
+cn\isyanthony\wechat\rest\RestServer.class
+cn\isyanthony\wechat\Application.class
+META-INF\spring-configuration-metadata.json
