@@ -1,3 +1,5 @@
 spring:
   application:
     name: sy-wechat-api
+  redis:
+    password: qwe123456

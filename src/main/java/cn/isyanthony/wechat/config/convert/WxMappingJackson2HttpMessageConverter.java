@@ -1,4 +1,4 @@
-package cn.isyanthony.wechat.config;
+package cn.isyanthony.wechat.config.convert;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
