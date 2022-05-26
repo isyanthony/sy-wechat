@@ -1,5 +1,6 @@
 package cn.isyanthony.wechat.rest.config;
 
+import cn.isyanthony.wechat.config.WxMappingJackson2HttpMessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Component;
@@ -22,6 +23,8 @@ public class HttpConfig {
         SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
         requestFactory.setConnectTimeout(outTime);
         requestFactory.setReadTimeout(outTime);
-        return new RestTemplate();
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.getMessageConverters().add(new WxMappingJackson2HttpMessageConverter());
+        return restTemplate;
     }
 }
