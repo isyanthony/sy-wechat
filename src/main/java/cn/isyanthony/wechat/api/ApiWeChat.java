@@ -3,10 +3,14 @@ package cn.isyanthony.wechat.api;
 import cn.isyanthony.wechat.builder.WeChatApiUrlBuilder;
 import cn.isyanthony.wechat.resonse.AccessTokenResponse;
 import cn.isyanthony.wechat.resonse.Code2SessionResponse;
+import cn.isyanthony.wechat.resonse.UserPortraitResponse;
 import cn.isyanthony.wechat.rest.RestServer;
+import cn.isyanthony.wechat.util.ApiUtils;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 
 /**
  * @author: Anthony
@@ -21,7 +25,13 @@ public class ApiWeChat {
     RestServer server;
 
     @Resource
+    ApiUtils apiUtils;
+
+    @Resource
     WeChatApiUrlBuilder builder;
+
+    @Resource
+    StringRedisTemplate stringRedisTemplate;
 
     /**
      * 获取用户 openId 以及 session_key
@@ -41,4 +51,22 @@ public class ApiWeChat {
     public AccessTokenResponse getAccessToken() throws Exception {
         return server.get(builder.getAccessToken() , AccessTokenResponse.class);
     }
+
+    /**
+     * 获取用户画像数据
+     * @param beginDate 开始时间
+     * @param endDate 最后时间
+     * @return 用户画像数据
+     * @throws Exception url不能为空
+     */
+    public UserPortraitResponse getUserPortrait(String beginDate , String endDate) throws Exception {
+        return server.post(builder.getUserPortrait(apiUtils.ForAccessToken()), new HashMap<String, Object>(){
+            {
+                put("beginDate", beginDate);
+                put("endDate", endDate);
+            }
+        }, UserPortraitResponse.class);
+    }
+
+
 }

@@ -1,11 +1,15 @@
 package cn.isyanthony.wechat.resonse;
 
+
+import lombok.Data;
+
 /**
  * @author: Syanthony
  * @Date: 2022/5/14
  * @Version: 1.0.0
  * @description: 获取AccessToken的响应体
  */
+@Data
 public class AccessTokenResponse {
 
     /**

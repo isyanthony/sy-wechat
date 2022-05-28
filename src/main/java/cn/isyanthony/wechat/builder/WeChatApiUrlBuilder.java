@@ -1,6 +1,7 @@
 package cn.isyanthony.wechat.builder;
 
 import cn.isyanthony.wechat.config.AppConfiguration;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -25,6 +26,8 @@ public class WeChatApiUrlBuilder {
     private static final String APP_SECRET = "SECRET";
     private static final String CODE_2_SESSION_JSCODE = "JSCODE";
 
+    private static final String ACCESS_TOKEN = "ACCESS_TOKEN";
+
     /**
      * 微信登录接口URL
      */
@@ -34,6 +37,21 @@ public class WeChatApiUrlBuilder {
      * 微信获取Access_TOKEN URL
      */
     private final static String URL_ACCESS_TOKEN = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
+
+    /**
+     * 获取用户画像分布接口URL
+     */
+    private final static String URL_USER_PORTRAIT = "https://api.weixin.qq.com/datacube/getweanalysisappiduserportrait?access_token=ACCESS_TOKEN";
+
+    /**
+     * 获取页面访问数据接口URL
+     */
+    private final static String URL_VISIT_PAGE = "https://api.weixin.qq.com/datacube/getweanalysisappidvisitpage?access_token=ACCESS_TOKEN";
+
+    /**
+     * 获取日访问数据趋势接口URL
+     */
+    private final static String URL_DAILY_VISIT_TREND = "https://api.weixin.qq.com/datacube/getweanalysisappiddailyvisittrend?access_token=ACCESS_TOKEN";
 
     /**
      * 构造code2session接口的url
@@ -59,5 +77,36 @@ public class WeChatApiUrlBuilder {
                 .replace(APP_SECRET, conf.getAppsecret());
         return url;
     }
+
+    /**
+     * 获取小程序新增或活跃用户的画像分布数据
+     * 时间范围支持昨天、最近7天、最近30天
+     * @param token access_token
+     * @return url
+     */
+    public String getUserPortrait(String token){
+        return URL_USER_PORTRAIT.replace(ACCESS_TOKEN, token);
+    }
+
+    /**
+     * 获取小程序访问数据
+     * @param token access_token
+     * @return url
+     */
+    public String getVisitPage(String token){
+        return URL_VISIT_PAGE.replace(ACCESS_TOKEN, token);
+    }
+
+
+    /**
+     * 获取小程序日访问数据趋势
+     * @param token access_token
+     * @return url
+     */
+    public String getDailyVisitTrend(String token){
+        return URL_DAILY_VISIT_TREND.replace(ACCESS_TOKEN, token);
+    }
+
+
 
 }
