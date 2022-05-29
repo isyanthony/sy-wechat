@@ -1,4 +1,4 @@
-package cn.isyanthony.wechat.resonse;
+package cn.isyanthony.wechat.miniapp.resonse;
 
 
 import lombok.Data;

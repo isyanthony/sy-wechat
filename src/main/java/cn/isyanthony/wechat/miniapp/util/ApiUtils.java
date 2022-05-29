@@ -1,6 +1,6 @@
-package cn.isyanthony.wechat.util;
-import static cn.isyanthony.wechat.constant.RedisConstant.*;
-import cn.isyanthony.wechat.api.ApiWeChat;
+package cn.isyanthony.wechat.miniapp.util;
+import static cn.isyanthony.wechat.miniapp.constant.RedisConstant.*;
+import cn.isyanthony.wechat.miniapp.api.ApiWeChat;
 import lombok.Data;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;

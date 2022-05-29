@@ -1,7 +1,6 @@
-package cn.isyanthony.wechat.builder;
+package cn.isyanthony.wechat.miniapp.builder;
 
-import cn.isyanthony.wechat.config.AppConfiguration;
-import org.springframework.data.domain.PageRequest;
+import cn.isyanthony.wechat.miniapp.config.AppConfiguration;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;

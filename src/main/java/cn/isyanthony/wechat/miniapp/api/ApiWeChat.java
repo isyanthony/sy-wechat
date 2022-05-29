@@ -1,11 +1,11 @@
-package cn.isyanthony.wechat.api;
+package cn.isyanthony.wechat.miniapp.api;
 
-import cn.isyanthony.wechat.builder.WeChatApiUrlBuilder;
-import cn.isyanthony.wechat.resonse.AccessTokenResponse;
-import cn.isyanthony.wechat.resonse.Code2SessionResponse;
-import cn.isyanthony.wechat.resonse.UserPortraitResponse;
-import cn.isyanthony.wechat.rest.RestServer;
-import cn.isyanthony.wechat.util.ApiUtils;
+import cn.isyanthony.wechat.miniapp.builder.WeChatApiUrlBuilder;
+import cn.isyanthony.wechat.miniapp.resonse.AccessTokenResponse;
+import cn.isyanthony.wechat.miniapp.resonse.Code2SessionResponse;
+import cn.isyanthony.wechat.miniapp.resonse.UserPortraitResponse;
+import cn.isyanthony.wechat.miniapp.rest.RestServer;
+import cn.isyanthony.wechat.miniapp.util.ApiUtils;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 

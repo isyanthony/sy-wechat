@@ -1,6 +1,6 @@
-package cn.isyanthony.wechat.rest;
+package cn.isyanthony.wechat.miniapp.rest;
 
-import cn.isyanthony.wechat.rest.exception.RequestException;
+import cn.isyanthony.wechat.miniapp.rest.exception.RequestException;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;

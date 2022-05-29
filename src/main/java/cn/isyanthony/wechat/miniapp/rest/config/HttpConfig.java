@@ -1,6 +1,6 @@
-package cn.isyanthony.wechat.rest.config;
+package cn.isyanthony.wechat.miniapp.rest.config;
 
-import cn.isyanthony.wechat.config.convert.WxMappingJackson2HttpMessageConverter;
+import cn.isyanthony.wechat.miniapp.config.convert.WxMappingJackson2HttpMessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Component;

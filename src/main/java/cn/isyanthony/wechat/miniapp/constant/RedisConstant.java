@@ -1,4 +1,4 @@
-package cn.isyanthony.wechat.constant;
+package cn.isyanthony.wechat.miniapp.constant;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package cn.isyanthony.wechat;
 
-import cn.isyanthony.wechat.resonse.Code2SessionResponse;
+import cn.isyanthony.wechat.miniapp.resonse.Code2SessionResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.SpringApplication;

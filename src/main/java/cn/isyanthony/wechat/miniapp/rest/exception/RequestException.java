@@ -1,4 +1,4 @@
-package cn.isyanthony.wechat.rest.exception;
+package cn.isyanthony.wechat.miniapp.rest.exception;
 
 /**
  * @author: Syanthony

@@ -1,4 +1,4 @@
-package cn.isyanthony.wechat.jackson;
+package cn.isyanthony.wechat.miniapp.jackson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
