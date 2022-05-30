@@ -1,9 +1,7 @@
 package cn.isyanthony.wechat.miniapp.api;
 
 import cn.isyanthony.wechat.miniapp.builder.WeChatApiUrlBuilder;
-import cn.isyanthony.wechat.miniapp.resonse.AccessTokenResponse;
-import cn.isyanthony.wechat.miniapp.resonse.Code2SessionResponse;
-import cn.isyanthony.wechat.miniapp.resonse.UserPortraitResponse;
+import cn.isyanthony.wechat.miniapp.resonse.*;
 import cn.isyanthony.wechat.miniapp.rest.RestServer;
 import cn.isyanthony.wechat.miniapp.util.ApiUtils;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -68,5 +66,23 @@ public class ApiWeChat {
         }, UserPortraitResponse.class);
     }
 
+    /**
+     * 获取页面访问数据
+     * @return 页面访问数据
+     * @throws Exception url不能为空
+     */
+    public VisitPageResponse getVisitPage() throws Exception {
+        return server.get(builder.getVisitPage(apiUtils.ForAccessToken()), VisitPageResponse.class);
+    }
+
+
+    /**
+     * 获取日访问数据趋势
+     * @return 日访问数据
+     * @throws Exception url不能为空
+     */
+    public DailyVisitTrendResponse getDailyVisitTrend() throws Exception {
+        return server.get(builder.getDailyVisitTrend(apiUtils.ForAccessToken()), DailyVisitTrendResponse.class);
+    }
 
 }
